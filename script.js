@@ -97,3 +97,41 @@
     
             return document.getElementById('seventh').innerHTML = vovels;
         }
+
+        
+        // 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not. 
+
+        function prime_checker() {
+
+            let counts_input = parseInt(document.getElementById('prime_input').value);
+            let primes = '';
+
+            if( counts_input === 1 ) {
+                primes = 'not prime';
+                document.getElementById('eights').style.color = 'red';
+                return document.getElementById('eights').innerHTML = primes;
+            }
+            else if ( counts_input === 2 ) {
+                primes = 'prime';
+                document.getElementById('eights').style.color = 'rgb(5, 142, 1)';
+                return document.getElementById('eights').innerHTML = primes;
+            }
+            else { 
+
+                for( let n = 2; n < counts_input; n++ ){
+                    if( counts_input % n === 0)
+                    {
+                        
+                        document.getElementById('eights').style.color = 'red';
+                        primes = 'not prime';
+                        return document.getElementById('eights').innerHTML = primes;
+                    }
+
+                }
+                
+                document.getElementById('eights').style.color = 'rgb(5, 142, 1)';
+                primes = 'prime'
+                return document.getElementById('eights').innerHTML = primes;
+            }
+
+        }
