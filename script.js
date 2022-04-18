@@ -76,7 +76,24 @@
                 max = max;
             }
         }
- 
+
 
         return document.getElementById('sixth').innerHTML = max;
     }
+
+        // 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string. 
+
+        function wovel_count() {
+
+            let counts_input = document.getElementById('counts_input').value;
+            const all_vovels = 'aeiouAEIOU'
+            let vovels = 0;
+
+            for( let c = 0; c < counts_input.length; c++ ) {
+                if( all_vovels.indexOf(counts_input[c]) !== -1 ) {
+                    vovels = vovels + 1;
+                }
+            }
+    
+            return document.getElementById('seventh').innerHTML = vovels;
+        }
